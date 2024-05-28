@@ -229,6 +229,18 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         height: MediaQuery.of(context).size.height * 0.06,
                         width: MediaQuery.of(context).size.width * 0.1300,
                         decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 247, 247, 247),
+                          borderRadius: BorderRadius.circular(18),
+                        ),
+                        child: const Icon(
+                          Icons.phone,
+                          color: Color.fromARGB(255, 2, 179, 149),
+                        ),
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.06,
+                        width: MediaQuery.of(context).size.width * 0.1300,
+                        decoration: BoxDecoration(
                             color: const Color.fromARGB(255, 247, 247, 247),
                             borderRadius: BorderRadius.circular(18),
                             image: const DecorationImage(
@@ -237,7 +249,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                                 ),
                                 filterQuality: FilterQuality.high)),
                       ),
-                      const Icon(Icons.email,color: Colors.black,size: 40,),
+                      
                       GestureDetector(
                         onTap: () {
                           Navigator.pushReplacement(
