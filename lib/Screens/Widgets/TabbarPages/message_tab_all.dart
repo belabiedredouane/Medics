@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/chat_screen.dart';
-import 'package:medical/Screens/Views/shedule_tab1.dart';
-import 'package:medical/Screens/Views/shedule_tab2.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab1.dart';
-import 'package:medical/Screens/Widgets/TabbarPages/tab2.dart';
-import 'package:medical/Screens/Login-Signup/login.dart';
 import 'package:medical/Screens/Widgets/message_all_widget.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class message_tab_all extends StatefulWidget {
-  const message_tab_all({Key? key}) : super(key: key);
+  const message_tab_all({super.key});
 
   @override
   _TabBarExampleState createState() => _TabBarExampleState();
@@ -67,9 +62,9 @@ class _TabBarExampleState extends State<message_tab_all>
                 context,
                 PageTransition(
                     type: PageTransitionType.bottomToTop,
-                    child: chat_screen()));
+                    child: const chat_screen()));
           },
-          child: message_all_widget(
+          child: const message_all_widget(
             image: "lib/icons/male-doctor.png",
             Maintext: "Dr. Marcus Horizon",
             subtext: "I don,t have any fever, but headchace...",
@@ -77,14 +72,14 @@ class _TabBarExampleState extends State<message_tab_all>
             message_count: "2",
           ),
         ),
-        message_all_widget(
+        const message_all_widget(
           image: "lib/icons/docto3.png",
           Maintext: "Dr. Alysa Hana",
           subtext: "Hello, How can i help you?",
           time: "10.24",
           message_count: "1",
         ),
-        message_all_widget(
+        const message_all_widget(
           image: "lib/icons/doctor2.png",
           Maintext: "Dr. Maria Elena",
           subtext: "Do you have fever?",

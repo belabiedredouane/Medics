@@ -7,7 +7,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 class forgot_pass extends StatefulWidget {
-  const forgot_pass({Key? key}) : super(key: key);
+  const forgot_pass({super.key});
 
   @override
   _TabBarExampleState createState() => _TabBarExampleState();
@@ -35,7 +35,7 @@ class _TabBarExampleState extends State<forgot_pass>
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: Container(
+          icon: SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.06,
               child: Image.asset("lib/icons/back2.png")),
@@ -43,7 +43,7 @@ class _TabBarExampleState extends State<forgot_pass>
             Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.topToBottom, child: login()));
+                    type: PageTransitionType.topToBottom, child: const login()));
           },
         ),
         backgroundColor: Colors.white,
@@ -51,12 +51,12 @@ class _TabBarExampleState extends State<forgot_pass>
         elevation: 0,
       ),
       body: SingleChildScrollView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               Row(
@@ -71,7 +71,7 @@ class _TabBarExampleState extends State<forgot_pass>
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Row(
@@ -86,11 +86,11 @@ class _TabBarExampleState extends State<forgot_pass>
                   )
                 ],
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height,
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 50,
                     ),
                     Padding(
@@ -100,14 +100,14 @@ class _TabBarExampleState extends State<forgot_pass>
                         width: MediaQuery.of(context).size.height,
                         decoration: BoxDecoration(
                           border: Border.all(
-                              color: Color.fromARGB(255, 235, 235, 235)),
-                          color: Color.fromARGB(255, 241, 241, 241),
+                              color: const Color.fromARGB(255, 235, 235, 235)),
+                          color: const Color.fromARGB(255, 241, 241, 241),
                           borderRadius: BorderRadius.circular(30),
                         ),
                         child: Column(
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(5),
+                              padding: const EdgeInsets.all(5),
                               child: TabBar(
                                 indicator: BoxDecoration(
                                   color: Colors.white,
@@ -119,7 +119,7 @@ class _TabBarExampleState extends State<forgot_pass>
                                 labelColor:
                                     const Color.fromARGB(255, 3, 190, 150),
                                 controller: tabController,
-                                tabs: [
+                                tabs: const [
                                   Tab(
                                     text: "Email",
                                   ),
@@ -133,13 +133,13 @@ class _TabBarExampleState extends State<forgot_pass>
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Expanded(
                         child: TabBarView(
                             controller: tabController,
-                            children: [tab1(), tab2()]))
+                            children: const [tab1(), tab2()]))
                   ],
                 ),
               ),

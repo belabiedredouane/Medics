@@ -7,6 +7,8 @@ import 'package:medical/Screens/Views/Dashboard_screen.dart';
 import 'package:medical/Screens/Widgets/TabbarPages/message_tab_all.dart';
 
 class Homepage extends StatefulWidget {
+  const Homepage({super.key});
+
   @override
   State<Homepage> createState() => _HomepageState();
 }
@@ -22,10 +24,10 @@ class _HomepageState extends State<Homepage> {
   int page = 0;
 
   List<Widget> pages = [
-    Dashboard(), // You can replace this with your actual pages
-    message_tab_all(),
-    shedule_screen(),
-    Profile_screen()
+    const Dashboard(), // You can replace this with your actual pages
+    const message_tab_all(),
+    const shedule_screen(),
+    const Profile_screen()
   ];
 
   @override

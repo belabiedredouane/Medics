@@ -16,10 +16,10 @@ class _Screen1State extends State<Screen1> {
     // TODO: implement initState
     super.initState();
 
-    Timer(Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (BuildContext context) {
-        return on_boarding();
+        return const on_boarding();
       }));
     });
   }
@@ -27,7 +27,7 @@ class _Screen1State extends State<Screen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 1, 77, 60),
+      backgroundColor: const Color.fromARGB(255, 1, 77, 60),
       body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,

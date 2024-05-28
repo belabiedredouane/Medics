@@ -10,8 +10,8 @@ class shedule_card extends StatelessWidget {
   final String time;
   final String confirmation;
 
-  shedule_card(
-      {required this.mainText,
+  const shedule_card(
+      {super.key, required this.mainText,
       required this.subText,
       required this.date,
       required this.confirmation,
@@ -32,7 +32,7 @@ class shedule_card extends StatelessWidget {
         child: Column(children: [
           Row(
             children: [
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.07,
                 width: MediaQuery.of(context).size.width * 0.6,
                 child: Padding(
@@ -71,7 +71,7 @@ class shedule_card extends StatelessWidget {
               )
             ],
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.03,
             width: MediaQuery.of(context).size.width * 0.8500,
             child: Row(children: [
@@ -137,7 +137,7 @@ class shedule_card extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.04500,
                   width: MediaQuery.of(context).size.width * 0.3800,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 232, 233, 233),
+                    color: const Color.fromARGB(255, 232, 233, 233),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
@@ -148,7 +148,7 @@ class shedule_card extends StatelessWidget {
                           style: GoogleFonts.poppins(
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 61, 61, 61)),
+                              color: const Color.fromARGB(255, 61, 61, 61)),
                         ),
                       ]),
                 ),
@@ -156,7 +156,7 @@ class shedule_card extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.04500,
                   width: MediaQuery.of(context).size.width * 0.3800,
                   decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 4, 190, 144),
+                    color: const Color.fromARGB(255, 4, 190, 144),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(
@@ -167,7 +167,7 @@ class shedule_card extends StatelessWidget {
                           style: GoogleFonts.poppins(
                               fontSize: 15.sp,
                               fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 252, 252, 252)),
+                              color: const Color.fromARGB(255, 252, 252, 252)),
                         ),
                       ]),
                 ),

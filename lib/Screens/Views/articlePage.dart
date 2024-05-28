@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/Dashboard_screen.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
 import 'package:medical/Screens/Widgets/article.dart';
-import 'package:medical/Screens/Widgets/doctorList.dart';
-import 'package:medical/Screens/Widgets/listIcons.dart';
-import 'package:medical/Screens/Login-Signup/login_signup.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -21,14 +17,14 @@ class articlePage extends StatelessWidget {
           "Articles",
           style: GoogleFonts.poppins(
             fontSize: 20,
-            color: Color.fromARGB(255, 100, 98, 98),
+            color: const Color.fromARGB(255, 100, 98, 98),
           ),
         ),
         centerTitle: true,
         toolbarHeight: 80,
         elevation: 0,
         leading: IconButton(
-          icon: Container(
+          icon: SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.06,
               child: Image.asset("lib/icons/back2.png")),
@@ -36,11 +32,11 @@ class articlePage extends StatelessWidget {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
-                    type: PageTransitionType.fade, child: Homepage()));
+                    type: PageTransitionType.fade, child: const Homepage()));
           },
         ),
         actions: [
-          Container(
+          SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.06,
               child: Image.asset("lib/icons/more.png")),
@@ -53,7 +49,7 @@ class articlePage extends StatelessWidget {
             child: Container(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.9,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: TextField(
                 textAlign: TextAlign.start,
                 textInputAction: TextInputAction.none,
@@ -62,13 +58,13 @@ class articlePage extends StatelessWidget {
                 textAlignVertical: TextAlignVertical.center,
                 decoration: InputDecoration(
                   focusColor: Colors.black26,
-                  fillColor: Color.fromARGB(255, 247, 247, 247),
+                  fillColor: const Color.fromARGB(255, 247, 247, 247),
                   filled: true,
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.01,
                       width: MediaQuery.of(context).size.width * 0.01,
                       child: Image.asset(
@@ -78,7 +74,7 @@ class articlePage extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Search doctor, drugs, articles..."),
+                  label: const Text("Search doctor, drugs, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -92,7 +88,7 @@ class articlePage extends StatelessWidget {
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 Text(
@@ -105,7 +101,7 @@ class articlePage extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -114,7 +110,7 @@ class articlePage extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.06,
                   width: MediaQuery.of(context).size.width * 3,
                   child: ListView(scrollDirection: Axis.horizontal, children: [
@@ -216,7 +212,7 @@ class articlePage extends StatelessWidget {
           ),
           //TRENDING ARTICLE START FROM HERE
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 Text(
@@ -238,7 +234,7 @@ class articlePage extends StatelessWidget {
                 width: 20,
               ),
               Expanded(
-                child: Container(
+                child: SizedBox(
                   height: MediaQuery.of(context).size.height * 0.2500,
                   width: MediaQuery.of(context).size.width * 0.4,
                   child: ListView(scrollDirection: Axis.horizontal, children: [
@@ -279,7 +275,7 @@ class articlePage extends StatelessWidget {
                                     0.01800,
                                 width:
                                     MediaQuery.of(context).size.width * 0.1200,
-                                color: Color.fromARGB(255, 233, 231, 231),
+                                color: const Color.fromARGB(255, 233, 231, 231),
                                 child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -288,7 +284,7 @@ class articlePage extends StatelessWidget {
                                         style: GoogleFonts.poppins(
                                             fontSize: 10,
                                             fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
+                                            color: const Color.fromARGB(
                                                 255, 6, 110, 102)),
                                       ),
                                     ]),
@@ -302,10 +298,10 @@ class articlePage extends StatelessWidget {
                                 style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
+                                    color: const Color.fromARGB(255, 0, 0, 0)),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             Padding(
@@ -326,7 +322,7 @@ class articlePage extends StatelessWidget {
                                     "5min Read",
                                     style: GoogleFonts.poppins(
                                         fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
+                                        color: const Color.fromARGB(255, 0, 136, 102),
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],
@@ -334,7 +330,7 @@ class articlePage extends StatelessWidget {
                             ),
                           ]),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 20,
                     ),
                     Container(
@@ -374,7 +370,7 @@ class articlePage extends StatelessWidget {
                                     0.01800,
                                 width:
                                     MediaQuery.of(context).size.width * 0.1200,
-                                color: Color.fromARGB(255, 233, 231, 231),
+                                color: const Color.fromARGB(255, 233, 231, 231),
                                 child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -383,7 +379,7 @@ class articlePage extends StatelessWidget {
                                         style: GoogleFonts.poppins(
                                             fontSize: 10,
                                             fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
+                                            color: const Color.fromARGB(
                                                 255, 6, 110, 102)),
                                       ),
                                     ]),
@@ -397,10 +393,10 @@ class articlePage extends StatelessWidget {
                                 style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
+                                    color: const Color.fromARGB(255, 0, 0, 0)),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             Padding(
@@ -421,7 +417,7 @@ class articlePage extends StatelessWidget {
                                     "5min Read",
                                     style: GoogleFonts.poppins(
                                         fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
+                                        color: const Color.fromARGB(255, 0, 136, 102),
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],
@@ -429,7 +425,7 @@ class articlePage extends StatelessWidget {
                             ),
                           ]),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Container(
@@ -469,7 +465,7 @@ class articlePage extends StatelessWidget {
                                     0.01800,
                                 width:
                                     MediaQuery.of(context).size.width * 0.1200,
-                                color: Color.fromARGB(255, 233, 231, 231),
+                                color: const Color.fromARGB(255, 233, 231, 231),
                                 child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -478,7 +474,7 @@ class articlePage extends StatelessWidget {
                                         style: GoogleFonts.poppins(
                                             fontSize: 10,
                                             fontWeight: FontWeight.w500,
-                                            color: Color.fromARGB(
+                                            color: const Color.fromARGB(
                                                 255, 6, 110, 102)),
                                       ),
                                     ]),
@@ -492,10 +488,10 @@ class articlePage extends StatelessWidget {
                                 style: GoogleFonts.inter(
                                     fontSize: 13.sp,
                                     fontWeight: FontWeight.w600,
-                                    color: Color.fromARGB(255, 0, 0, 0)),
+                                    color: const Color.fromARGB(255, 0, 0, 0)),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 15,
                             ),
                             Padding(
@@ -516,7 +512,7 @@ class articlePage extends StatelessWidget {
                                     "5min Read",
                                     style: GoogleFonts.poppins(
                                         fontSize: 11.sp,
-                                        color: Color.fromARGB(255, 0, 136, 102),
+                                        color: const Color.fromARGB(255, 0, 136, 102),
                                         fontWeight: FontWeight.w500),
                                   ),
                                 ],
@@ -534,7 +530,7 @@ class articlePage extends StatelessWidget {
             height: 20,
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: [
                 Text(
@@ -551,7 +547,7 @@ class articlePage extends StatelessWidget {
             height: 20,
           ),
           //Import this from widget
-          article(
+          const article(
               image: "images/article1.png",
               dateText: "2 min Read",
               duration: "2 min read",

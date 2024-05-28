@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Login-Signup/login_signup.dart';
-import 'package:medical/Screens/Views/Dashboard_screen.dart';
 import 'package:medical/Screens/Views/Homepage.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
@@ -21,7 +19,7 @@ class doctor_search extends StatelessWidget {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
-                    type: PageTransitionType.fade, child: Homepage()));
+                    type: PageTransitionType.fade, child: const Homepage()));
           },
           child: Container(
             height: 10,
@@ -63,34 +61,34 @@ class doctor_search extends StatelessWidget {
                   context,
                   PageTransition(
                       type: PageTransitionType.rightToLeft,
-                      child: DoctorDetails()));
+                      child: const DoctorDetails()));
             },
-            child: doctorList(
+            child: const doctorList(
                 distance: "800m Away",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",
                 numRating: "4.7",
                 subtext: "Chardiologist"),
           ),
-          doctorList(
+          const doctorList(
               distance: "800m Away",
               image: "lib/icons/docto3.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
               subtext: "Chardiologist"),
-          doctorList(
+          const doctorList(
               distance: "800m Away",
               image: "lib/icons/doctor2.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
               subtext: "Chardiologist"),
-          doctorList(
+          const doctorList(
               distance: "800m Away",
               image: "lib/icons/black-doctor.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
               subtext: "Chardiologist"),
-          doctorList(
+          const doctorList(
               distance: "800m Away",
               image: "lib/icons/male-doctor.png",
               maintext: "Dr. Marcus Horizon",

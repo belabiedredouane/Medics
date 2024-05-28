@@ -30,13 +30,13 @@ class login_signup extends StatelessWidget {
               "Lets get Started!",
               style: GoogleFonts.poppins(
                   fontSize: 22.sp,
-                  color: Color.fromARGB(211, 14, 13, 13),
+                  color: const Color.fromARGB(211, 14, 13, 13),
                   fontWeight: FontWeight.w700,
                   letterSpacing: 1),
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         Row(
@@ -48,17 +48,17 @@ class login_signup extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                     fontSize: 15.sp,
-                    color: Color.fromARGB(211, 14, 13, 13),
+                    color: const Color.fromARGB(211, 14, 13, 13),
                     fontWeight: FontWeight.w400,
                     letterSpacing: 1),
               ),
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 50,
         ),
-        Container(
+        SizedBox(
           height: MediaQuery.of(context).size.height * 0.06,
           width: MediaQuery.of(context).size.width * 0.7,
           child: ElevatedButton(
@@ -66,10 +66,10 @@ class login_signup extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
-                      type: PageTransitionType.rightToLeft, child: login()));
+                      type: PageTransitionType.rightToLeft, child: const login()));
             },
             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 3, 190, 150),
+              foregroundColor: const Color.fromARGB(255, 3, 190, 150),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -79,14 +79,14 @@ class login_signup extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 18.sp,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0,
               ),
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Container(
@@ -100,10 +100,10 @@ class login_signup extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
-                      type: PageTransitionType.rightToLeft, child: register()));
+                      type: PageTransitionType.rightToLeft, child: const register()));
             },
             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 255, 255, 255),
+              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -113,7 +113,7 @@ class login_signup extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 18.sp,
-                color: Color.fromARGB(255, 3, 190, 150),
+                color: const Color.fromARGB(255, 3, 190, 150),
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0,
               ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
-import 'package:medical/Screens/Views/find_doctor.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -19,7 +18,7 @@ class appointment extends StatelessWidget {
             Navigator.pushReplacement(
                 context,
                 PageTransition(
-                    type: PageTransitionType.fade, child: DoctorDetails()));
+                    type: PageTransitionType.fade, child: const DoctorDetails()));
           },
           child: Container(
             height: 10,
@@ -59,7 +58,7 @@ class appointment extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              doctorList(
+              const doctorList(
                 distance: "800m away",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",
@@ -113,7 +112,7 @@ class appointment extends StatelessWidget {
                             filterQuality: FilterQuality.high,
                           )),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Expanded(
@@ -128,7 +127,7 @@ class appointment extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Padding(
@@ -308,7 +307,7 @@ class appointment extends StatelessWidget {
                       "\$61.00",
                       style: GoogleFonts.poppins(
                           fontSize: 16.sp,
-                          color: Color.fromARGB(255, 4, 92, 58),
+                          color: const Color.fromARGB(255, 4, 92, 58),
                           fontWeight: FontWeight.w600),
                     ),
                   ],
@@ -335,7 +334,7 @@ class appointment extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Container(
@@ -358,7 +357,7 @@ class appointment extends StatelessWidget {
                               fontStyle: FontStyle.italic,
                               fontSize: 17.sp,
                               fontWeight: FontWeight.w600,
-                              color: Color.fromARGB(255, 38, 39, 117)),
+                              color: const Color.fromARGB(255, 38, 39, 117)),
                         ),
                         Text(
                           "Change",
@@ -371,71 +370,74 @@ class appointment extends StatelessWidget {
                       ]),
                 ),
               ),
-              Container(
+              SizedBox(
                 height: 80,
                 width: double.infinity,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
                     horizontal: 1,
                   ),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height * 0.06,
-                          width: MediaQuery.of(context).size.width * 0.2100,
-                          decoration: BoxDecoration(),
-                          child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Total",
-                                  style: GoogleFonts.inter(
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.w500,
-                                      letterSpacing: 0,
-                                      color: const Color.fromARGB(
-                                          137, 56, 56, 56)),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  "  \$61",
-                                  style: GoogleFonts.inter(
-                                      fontSize: 19.sp,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 0,
-                                      color: Colors.black87),
-                                ),
-                              ]),
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Container(
-                            height: MediaQuery.of(context).size.height * 0.06,
-                            width: MediaQuery.of(context).size.width * 0.4300,
-                            decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 2, 179, 149),
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.08,
+                            width: MediaQuery.of(context).size.width * 0.2100,
+                            decoration: const BoxDecoration(),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Book",
-                                    style: GoogleFonts.poppins(
+                                    "Total",
+                                    style: GoogleFonts.inter(
                                         fontSize: 15.sp,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w500),
+                                        fontWeight: FontWeight.w500,
+                                        letterSpacing: 0,
+                                        color: const Color.fromARGB(
+                                            137, 56, 56, 56)),
+                                  ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    "  \$61",
+                                    style: GoogleFonts.inter(
+                                        fontSize: 19.sp,
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 0,
+                                        color: Colors.black87),
                                   ),
                                 ]),
                           ),
-                        ),
-                      ]),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Container(
+                              height: MediaQuery.of(context).size.height * 0.06,
+                              width: MediaQuery.of(context).size.width * 0.4300,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 2, 179, 149),
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "Book",
+                                      style: GoogleFonts.poppins(
+                                          fontSize: 15.sp,
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ]),
+                            ),
+                          ),
+                        ]),
+                  ),
                 ),
               ),
             ],

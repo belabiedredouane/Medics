@@ -6,7 +6,7 @@ class date_Select extends StatefulWidget {
   final String maintext;
   final String date;
 
-  date_Select({required this.date, required this.maintext});
+  const date_Select({super.key, required this.date, required this.maintext});
 
   @override
   _date_SelectState createState() => _date_SelectState();

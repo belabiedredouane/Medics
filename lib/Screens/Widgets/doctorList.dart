@@ -9,8 +9,8 @@ class doctorList extends StatelessWidget {
   final String numRating;
   final String distance;
 
-  doctorList(
-      {required this.distance,
+  const doctorList(
+      {super.key, required this.distance,
       required this.image,
       required this.maintext,
       required this.numRating,
@@ -26,7 +26,7 @@ class doctorList extends StatelessWidget {
           width: MediaQuery.of(context).size.width * 0.9,
           decoration: BoxDecoration(
             color: Colors.white,
-            border: Border.all(color: Color.fromARGB(255, 226, 226, 226)),
+            border: Border.all(color: const Color.fromARGB(255, 226, 226, 226)),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
@@ -48,7 +48,7 @@ class doctorList extends StatelessWidget {
               const SizedBox(
                 width: 10,
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1200,
                 width: MediaQuery.of(context).size.width * 0.4,
                 child: Column(
@@ -76,7 +76,7 @@ class doctorList extends StatelessWidget {
                         Container(
                           height: MediaQuery.of(context).size.height * 0.01500,
                           width: MediaQuery.of(context).size.width * 0.08,
-                          color: Color.fromARGB(255, 240, 236, 236),
+                          color: const Color.fromARGB(255, 240, 236, 236),
                           child: Row(children: [
                             Container(
                               height:
@@ -93,14 +93,14 @@ class doctorList extends StatelessWidget {
                               numRating,
                               style: GoogleFonts.poppins(
                                   fontSize: 11.sp,
-                                  color: Color.fromARGB(255, 4, 179, 120),
+                                  color: const Color.fromARGB(255, 4, 179, 120),
                                   fontWeight: FontWeight.bold),
                             ),
                           ]),
                         ),
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     Row(children: [
@@ -122,7 +122,7 @@ class doctorList extends StatelessWidget {
                         distance,
                         style: GoogleFonts.poppins(
                             fontSize: 11.sp,
-                            color: Color.fromARGB(255, 133, 133, 133),
+                            color: const Color.fromARGB(255, 133, 133, 133),
                             fontWeight: FontWeight.bold),
                       ),
                     ]),

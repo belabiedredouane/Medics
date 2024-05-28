@@ -18,7 +18,7 @@ class login extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         leading: IconButton(
-          icon: Container(
+          icon: SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.06,
               child: Image.asset("lib/icons/back2.png")),
@@ -27,7 +27,7 @@ class login extends StatelessWidget {
                 context,
                 PageTransition(
                     type: PageTransitionType.leftToRight,
-                    child: login_signup()));
+                    child: const login_signup()));
           },
         ),
         centerTitle: true,
@@ -50,12 +50,12 @@ class login extends StatelessWidget {
             height: 40,
           ),
           //Text field Login import from Auth_text_field widget
-          Auth_text_field(text: "Enter you email", icon: "lib/icons/email.png"),
+          const Auth_text_field(text: "Enter you email", icon: "lib/icons/email.png"),
           const SizedBox(
             height: 5,
           ),
           //Text field Password
-          Auth_text_field(
+          const Auth_text_field(
               text: "Enter your password", icon: "lib/icons/lock.png"),
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             GestureDetector(
@@ -64,7 +64,7 @@ class login extends StatelessWidget {
                     context,
                     PageTransition(
                         type: PageTransitionType.bottomToTop,
-                        child: forgot_pass()));
+                        child: const forgot_pass()));
               },
               child: Text(
                 "Forgot your password?",
@@ -75,10 +75,10 @@ class login extends StatelessWidget {
               ),
             )
           ]),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.05,
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(
@@ -86,7 +86,7 @@ class login extends StatelessWidget {
                 // Perform verification or other actions here
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 3, 190, 150),
+                foregroundColor: const Color.fromARGB(255, 3, 190, 150),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -96,14 +96,14 @@ class login extends StatelessWidget {
                   Navigator.pushReplacement(
                       context,
                       PageTransition(
-                          type: PageTransitionType.fade, child: Homepage()));
+                          type: PageTransitionType.fade, child: const Homepage()));
                 },
                 child: Text(
                   "Login",
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontSize: 18.sp,
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: const Color.fromARGB(255, 255, 255, 255),
                     fontWeight: FontWeight.w500,
                     letterSpacing: 0,
                   ),
@@ -111,7 +111,7 @@ class login extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
@@ -128,7 +128,7 @@ class login extends StatelessWidget {
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: register()));
+                          child: const register()));
                 },
                 child: Text(
                   "Sign Up",
@@ -149,7 +149,7 @@ class login extends StatelessWidget {
             children: [
               Expanded(child: Divider()),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Text(
                   "or",
                   style: TextStyle(
@@ -165,16 +165,16 @@ class login extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          auth_social_logins(
+          const auth_social_logins(
               logo: "images/google.png", text: "Sign in with Google"),
           const SizedBox(
             height: 20,
           ),
-          auth_social_logins(logo: "images/apple.png", text: "Sign in Apple"),
+          const auth_social_logins(logo: "images/apple.png", text: "Sign in Apple"),
           const SizedBox(
             height: 20,
           ),
-          auth_social_logins(
+          const auth_social_logins(
               logo: "images/facebook.png", text: "Sign in facebook")
         ]),
       ),

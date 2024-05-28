@@ -9,7 +9,7 @@ class chat_doctor extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(
+        SizedBox(
           height: MediaQuery.of(context).size.height * 0.06,
           width: MediaQuery.of(context).size.width * 0.8,
           child: Row(children: [
@@ -27,7 +27,7 @@ class chat_doctor extends StatelessWidget {
             const SizedBox(
               width: 10,
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.6,
               child: Column(
@@ -41,14 +41,14 @@ class chat_doctor extends StatelessWidget {
                       style: GoogleFonts.poppins(
                           fontSize: 17.sp,
                           fontWeight: FontWeight.w500,
-                          color: Color.fromARGB(255, 41, 41, 41)),
+                          color: const Color.fromARGB(255, 41, 41, 41)),
                     ),
                     Text(
                       "10 min ago",
                       style: GoogleFonts.poppins(
                           fontSize: 11.sp,
                           fontWeight: FontWeight.w500,
-                          color: Color.fromARGB(255, 92, 92, 92)),
+                          color: const Color.fromARGB(255, 92, 92, 92)),
                     )
                   ]),
             ),

@@ -24,14 +24,14 @@ class chat_info extends StatelessWidget {
             style: GoogleFonts.poppins(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w500,
-                color: Color.fromARGB(255, 0, 131, 113)),
+                color: const Color.fromARGB(255, 0, 131, 113)),
           ),
           Text(
             "You can consult your problem to the doctor",
             style: GoogleFonts.poppins(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w500,
-                color: Color.fromARGB(255, 136, 136, 136)),
+                color: const Color.fromARGB(255, 136, 136, 136)),
           )
         ]),
       ),

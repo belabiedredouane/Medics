@@ -8,8 +8,8 @@ class message_all_widget extends StatelessWidget {
   final String time;
   final String message_count;
 
-  message_all_widget(
-      {required this.Maintext,
+  const message_all_widget(
+      {super.key, required this.Maintext,
       required this.subtext,
       required this.image,
       required this.message_count,
@@ -19,11 +19,11 @@ class message_all_widget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Container(
-          height: MediaQuery.of(context).size.height * 0.06,
+          height: MediaQuery.of(context).size.height * 0.08,
           width: MediaQuery.of(context).size.width * 0.9,
           color: Colors.white,
           child: Row(children: [
@@ -37,7 +37,7 @@ class message_all_widget extends StatelessWidget {
                       image: AssetImage(image),
                       filterQuality: FilterQuality.high)),
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Container(
@@ -70,8 +70,8 @@ class message_all_widget extends StatelessWidget {
                     ),
                   ]),
             ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.06,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.1,
               width: MediaQuery.of(context).size.width * 0.1200,
               child: Column(children: [
                 const SizedBox(
@@ -83,7 +83,7 @@ class message_all_widget extends StatelessWidget {
                   height: 10,
                 ),
                 Container(
-                  height: 16,
+                  height: 22,
                   width: 16,
                   decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 2, 134, 117),
@@ -95,7 +95,7 @@ class message_all_widget extends StatelessWidget {
                         //Message Count Here
                         Text(
                           message_count,
-                          style: TextStyle(fontSize: 10, color: Colors.white),
+                          style: const TextStyle(fontSize: 10, color: Colors.white),
                         )
                       ]),
                 )

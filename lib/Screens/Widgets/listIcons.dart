@@ -6,7 +6,7 @@ class listIcons extends StatelessWidget {
   final String Icon;
   final String text;
 
-  listIcons({required this.Icon, required this.text});
+  const listIcons({super.key, required this.Icon, required this.text});
 
   @override
   Widget build(BuildContext context) {

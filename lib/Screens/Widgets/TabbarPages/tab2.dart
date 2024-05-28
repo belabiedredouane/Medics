@@ -10,11 +10,11 @@ class tab2 extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(children: [
-        SizedBox(
+        const SizedBox(
           height: 40,
         ),
         Center(
-          child: Container(
+          child: SizedBox(
             height: MediaQuery.of(context).size.height * 0.1,
             width: MediaQuery.of(context).size.width * 0.9,
             child: TextField(
@@ -25,7 +25,7 @@ class tab2 extends StatelessWidget {
               textAlignVertical: TextAlignVertical.center,
               decoration: InputDecoration(
                   focusColor: Colors.black26,
-                  fillColor: Color.fromARGB(255, 247, 247, 247),
+                  fillColor: const Color.fromARGB(255, 247, 247, 247),
                   filled: true,
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(
@@ -36,7 +36,7 @@ class tab2 extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Enter your password"),
+                  label: const Text("Enter your password"),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -45,7 +45,7 @@ class tab2 extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           height: MediaQuery.of(context).size.height * 0.05,
           width: MediaQuery.of(context).size.width * 01,
           child: ElevatedButton(
@@ -53,7 +53,7 @@ class tab2 extends StatelessWidget {
               // Perform verification or other actions here
             },
             style: ElevatedButton.styleFrom(
-              primary: Color.fromARGB(255, 3, 190, 150),
+              foregroundColor: const Color.fromARGB(255, 3, 190, 150),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30),
               ),
@@ -63,7 +63,7 @@ class tab2 extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 18.sp,
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 255, 255, 255),
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0,
               ),

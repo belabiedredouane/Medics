@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Views/doctor_search.dart';
 import 'package:medical/Screens/Views/find_doctor.dart';
 import 'package:medical/Screens/Widgets/article.dart';
 import 'package:medical/Screens/Widgets/banner.dart';
-import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:medical/Screens/Widgets/list_doctor1.dart';
 import 'package:medical/Screens/Widgets/listicons.dart';
 import 'package:medical/Screens/Views/articlePage.dart';
@@ -20,7 +18,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         actions: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
@@ -37,13 +35,13 @@ class Dashboard extends StatelessWidget {
         ],
         title: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Text(
               "Find your desire\nhealth solution",
               style: GoogleFonts.inter(
-                  color: Color.fromARGB(255, 51, 47, 47),
+                  color: const Color.fromARGB(255, 51, 47, 47),
                   fontSize: 20.sp,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 1),
@@ -53,40 +51,40 @@ class Dashboard extends StatelessWidget {
         toolbarHeight: 130,
         elevation: 0,
       ),
-      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: SingleChildScrollView(
         child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Center(
             child: Container(
               height: MediaQuery.of(context).size.height * 0.06,
               width: MediaQuery.of(context).size.width * 0.9,
-              decoration: BoxDecoration(),
+              decoration: const BoxDecoration(),
               child: TextField(
                 onTap: () {
                   Navigator.push(
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: find_doctor()));
+                          child: const find_doctor()));
                 },
-                textAlign: TextAlign.start,
-                textInputAction: TextInputAction.none,
+                textAlign: TextAlign.start,/* 
+                textInputAction: TextInputAction.none, */
                 autofocus: false,
                 obscureText: false,
                 keyboardType: TextInputType.emailAddress,
                 textAlignVertical: TextAlignVertical.center,
                 decoration: InputDecoration(
                   focusColor: Colors.black26,
-                  fillColor: Color.fromARGB(255, 247, 247, 247),
+                  fillColor: const Color.fromARGB(255, 247, 247, 247),
                   filled: true,
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
-                    child: Container(
+                    child: SizedBox(
                       height: 10,
                       width: 10,
                       child: Image.asset(
@@ -96,7 +94,7 @@ class Dashboard extends StatelessWidget {
                     ),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
-                  label: Text("Search doctor, drugs, articles..."),
+                  label: const Text("Search doctor, drugs, articles..."),
                   floatingLabelBehavior: FloatingLabelBehavior.never,
                   border: OutlineInputBorder(
                     borderSide: BorderSide.none,
@@ -106,7 +104,7 @@ class Dashboard extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           //Body Start fro here
@@ -121,7 +119,7 @@ class Dashboard extends StatelessWidget {
           ),
 
           //List icons (Can Edit in Widgets )
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           const banner(),
@@ -139,7 +137,7 @@ class Dashboard extends StatelessWidget {
                   style: GoogleFonts.inter(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 46, 46, 46),
+                    color: const Color.fromARGB(255, 46, 46, 46),
                   ),
                 ),
                 GestureDetector(
@@ -148,7 +146,7 @@ class Dashboard extends StatelessWidget {
                         context,
                         PageTransition(
                             type: PageTransitionType.rightToLeft,
-                            child: doctor_search()));
+                            child: const doctor_search()));
                   },
                   child: Text(
                     "See all",
@@ -161,18 +159,18 @@ class Dashboard extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            child: Container(
+            child: SizedBox(
               height: 180,
               width: 400,
               child: ListView(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
-                children: [
+                children: const [
                   list_doctor1(
                       distance: "130m Away",
                       image: "lib/icons/male-doctor.png",
@@ -208,7 +206,7 @@ class Dashboard extends StatelessWidget {
                   style: GoogleFonts.inter(
                     fontSize: 18.sp,
                     fontWeight: FontWeight.w700,
-                    color: Color.fromARGB(255, 46, 46, 46),
+                    color: const Color.fromARGB(255, 46, 46, 46),
                   ),
                 ),
                 GestureDetector(
@@ -217,7 +215,7 @@ class Dashboard extends StatelessWidget {
                         context,
                         PageTransition(
                             type: PageTransitionType.rightToLeft,
-                            child: articlePage()));
+                            child: const articlePage()));
                   },
                   child: Text(
                     "See all",
@@ -230,16 +228,16 @@ class Dashboard extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           //Article banner here import from widget>article
-          article(
+          const article(
               image: "images/article1.png",
               dateText: "Jun 10, 2021 ",
               duration: "5min read",
               mainText:
-                  "The 25 Healthiest Fruits You Can Eat,\nAccording to a Nutritionist"),
+                  "The 25 Healthiest Fruits You Can Eat,According to a Nutritionist"),
         ]),
       ),
     );

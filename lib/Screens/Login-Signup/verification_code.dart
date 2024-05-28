@@ -17,7 +17,7 @@ class verification_code extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(children: [
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
           Row(
@@ -32,7 +32,7 @@ class verification_code extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Row(
@@ -47,7 +47,7 @@ class verification_code extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -57,18 +57,18 @@ class verification_code extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.06,
                 width: MediaQuery.of(context).size.width * 0.1,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(241, 245, 245, 245),
+                  color: const Color.fromARGB(241, 245, 245, 245),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.black12),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: 8.0), // Adjust horizontal padding as desired
                   child: TextField(
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
 
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(borderSide: BorderSide.none),
                       counterText: '', // Set counterText to an empty string
                       contentPadding:
@@ -84,18 +84,18 @@ class verification_code extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.06,
                 width: MediaQuery.of(context).size.width * 0.1,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(241, 245, 245, 245),
+                  color: const Color.fromARGB(241, 245, 245, 245),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.black12),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: 8.0), // Adjust horizontal padding as desired
                   child: TextField(
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
 
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(borderSide: BorderSide.none),
                       counterText: '', // Set counterText to an empty string
                       contentPadding:
@@ -111,17 +111,17 @@ class verification_code extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.06,
                 width: MediaQuery.of(context).size.width * 0.1,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(241, 245, 245, 245),
+                  color: const Color.fromARGB(241, 245, 245, 245),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.black12),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: 8.0), // Adjust horizontal padding as desired
                   child: TextField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(borderSide: BorderSide.none),
                       counterText: '', // Set counterText to an empty string
                       contentPadding:
@@ -137,17 +137,17 @@ class verification_code extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.06,
                 width: MediaQuery.of(context).size.width * 0.1,
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(241, 245, 245, 245),
+                  color: const Color.fromARGB(241, 245, 245, 245),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: Colors.black12),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                       horizontal: 8.0), // Adjust horizontal padding as desired
                   child: TextField(
                     textAlign: TextAlign.center,
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       border: OutlineInputBorder(borderSide: BorderSide.none),
                       counterText: '', // Set counterText to an empty string
                       contentPadding:
@@ -161,10 +161,10 @@ class verification_code extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 40,
           ),
-          Container(
+          SizedBox(
             height: MediaQuery.of(context).size.height * 0.05,
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(
@@ -172,7 +172,7 @@ class verification_code extends StatelessWidget {
                 // Perform verification or other actions here
               },
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 3, 190, 150),
+                foregroundColor: const Color.fromARGB(255, 3, 190, 150),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -182,14 +182,14 @@ class verification_code extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: GoogleFonts.poppins(
                   fontSize: 18.sp,
-                  color: Color.fromARGB(255, 255, 255, 255),
+                  color: const Color.fromARGB(255, 255, 255, 255),
                   fontWeight: FontWeight.w500,
                   letterSpacing: 0,
                 ),
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
           Row(
