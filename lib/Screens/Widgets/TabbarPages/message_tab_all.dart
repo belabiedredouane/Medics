@@ -5,14 +5,14 @@ import 'package:medical/Screens/Widgets/message_all_widget.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class message_tab_all extends StatefulWidget {
-  const message_tab_all({super.key});
+class MessageTabAll extends StatefulWidget {
+  const MessageTabAll({super.key});
 
   @override
-  _TabBarExampleState createState() => _TabBarExampleState();
+  TabBarExampleState createState() => TabBarExampleState();
 }
 
-class _TabBarExampleState extends State<message_tab_all>
+class TabBarExampleState extends State<MessageTabAll>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -62,29 +62,29 @@ class _TabBarExampleState extends State<message_tab_all>
                 context,
                 PageTransition(
                     type: PageTransitionType.bottomToTop,
-                    child: const chat_screen()));
+                    child: const ChatScreen()));
           },
-          child: const message_all_widget(
+          child: const MessageAllWidget(
             image: "lib/icons/male-doctor.png",
-            Maintext: "Dr. Marcus Horizon",
+            maintext: "Dr. Marcus Horizon",
             subtext: "I don,t have any fever, but headchace...",
             time: "10.24",
-            message_count: "2",
+            messageCount: "2",
           ),
         ),
-        const message_all_widget(
+        const MessageAllWidget(
           image: "lib/icons/docto3.png",
-          Maintext: "Dr. Alysa Hana",
+          maintext: "Dr. Alysa Hana",
           subtext: "Hello, How can i help you?",
           time: "10.24",
-          message_count: "1",
+          messageCount: "1",
         ),
-        const message_all_widget(
+        const MessageAllWidget(
           image: "lib/icons/doctor2.png",
-          Maintext: "Dr. Maria Elena",
+          maintext: "Dr. Maria Elena",
           subtext: "Do you have fever?",
           time: "10.24",
-          message_count: "3",
+          messageCount: "3",
         ),
       ]),
     );

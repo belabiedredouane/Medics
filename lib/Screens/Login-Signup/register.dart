@@ -5,8 +5,8 @@ import 'package:medical/Screens/Widgets/Auth_text_field.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class register extends StatelessWidget {
-  const register({super.key});
+class Register extends StatelessWidget {
+  const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class register extends StatelessWidget {
             Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.leftToRight, child: const login()));
+                    type: PageTransitionType.leftToRight, child: const Login()));
           },
         ),
         title: Text(
@@ -62,9 +62,7 @@ class register extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                         horizontal: 10,
                       ),
-                      child: Container(
-                        child: Image.asset("lib/icons/person.png"),
-                      ),
+                      child: Image.asset("lib/icons/person.png"),
                     ),
                     prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
                     label: Text(
@@ -82,11 +80,11 @@ class register extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          const Auth_text_field(text: "Enter your name", icon: "lib/icons/email.png"),
+          const AuthTextField(text: "Enter your name", icon: "lib/icons/email.png"),
           const SizedBox(
             height: 5,
           ),
-          const Auth_text_field(
+          const AuthTextField(
               text: "Enter your password", icon: "lib/icons/lock.png"),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -149,7 +147,7 @@ class register extends StatelessWidget {
                       context,
                       PageTransition(
                           type: PageTransitionType.bottomToTop,
-                          child: const login()));
+                          child: const Login()));
                 },
                 child: Text(
                   "Sign in",

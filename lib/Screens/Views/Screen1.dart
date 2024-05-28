@@ -13,13 +13,12 @@ class Screen1 extends StatefulWidget {
 class _Screen1State extends State<Screen1> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
 
     Timer(const Duration(seconds: 3), () {
       Navigator.pushReplacement(context,
           MaterialPageRoute(builder: (BuildContext context) {
-        return const on_boarding();
+        return const OnBoarding();
       }));
     });
   }

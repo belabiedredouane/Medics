@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class on_board1 extends StatelessWidget {
-  const on_board1({super.key});
+class OnBoard1 extends StatelessWidget {
+  const OnBoard1({super.key});
 
   @override
   Widget build(BuildContext context) {

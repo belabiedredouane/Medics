@@ -5,8 +5,8 @@ import 'package:medical/Screens/Login-Signup/register.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class login_signup extends StatelessWidget {
-  const login_signup({super.key});
+class LoginSignup extends StatelessWidget {
+  const LoginSignup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class login_signup extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
-                      type: PageTransitionType.rightToLeft, child: const login()));
+                      type: PageTransitionType.rightToLeft, child: const Login()));
             },
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color.fromARGB(255, 3, 190, 150),
@@ -79,7 +79,7 @@ class login_signup extends StatelessWidget {
               textAlign: TextAlign.center,
               style: GoogleFonts.poppins(
                 fontSize: 18.sp,
-                color: const Color.fromARGB(255, 255, 255, 255),
+                color: const Color.fromARGB(255, 3, 190, 150),
                 fontWeight: FontWeight.w500,
                 letterSpacing: 0,
               ),
@@ -100,7 +100,7 @@ class login_signup extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   PageTransition(
-                      type: PageTransitionType.rightToLeft, child: const register()));
+                      type: PageTransitionType.rightToLeft, child: const Register()));
             },
             style: ElevatedButton.styleFrom(
               foregroundColor: const Color.fromARGB(255, 255, 255, 255),

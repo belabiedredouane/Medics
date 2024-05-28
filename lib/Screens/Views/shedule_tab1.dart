@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medical/Screens/Widgets/shedule_card.dart';
 
-class shedule_tab1 extends StatelessWidget {
-  const shedule_tab1({super.key});
+class SheduleTab1 extends StatelessWidget {
+  const SheduleTab1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class shedule_tab1 extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
-        shedule_card(
+        SheduleCard(
           confirmation: "Confirmed",
           mainText: "Dr. Marcus Horizon",
           subText: "Chardiologist",
@@ -23,7 +23,7 @@ class shedule_tab1 extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        shedule_card(
+        SheduleCard(
           confirmation: "Confirmed",
           mainText: "Dr. Marcus Horizon",
           subText: "Chardiologist",

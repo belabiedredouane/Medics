@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Widgets/profile_list.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class Profile_screen extends StatelessWidget {
-  const Profile_screen({super.key});
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -199,11 +199,11 @@ class Profile_screen extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30))),
-              child: const Column(children: [
-                SizedBox(
+              child:  const Column(children: [
+                 SizedBox(
                   height: 50,
                 ),
-                profile_list(
+                ProfileList(
                   image: "lib/icons/heart2.png",
                   title: "My Saved",
                   color: Colors.black87,
@@ -212,7 +212,7 @@ class Profile_screen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   child: Divider(),
                 ),
-                profile_list(
+                ProfileList(
                   image: "lib/icons/appoint.png",
                   title: "Appointmnet",
                   color: Colors.black87,
@@ -221,7 +221,7 @@ class Profile_screen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   child: Divider(),
                 ),
-                profile_list(
+                ProfileList(
                   image: "lib/icons/Chat.png",
                   title: "FAQs",
                   color: Colors.black87,
@@ -230,7 +230,7 @@ class Profile_screen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   child: Divider(),
                 ),
-                profile_list(
+                ProfileList(
                   image: "lib/icons/pay.png",
                   title: "Payment Method",
                   color: Colors.black87,
@@ -239,7 +239,7 @@ class Profile_screen extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   child: Divider(),
                 ),
-                profile_list(
+                ProfileList(
                   image: "lib/icons/logout.png",
                   title: "Log out",
                   color: Colors.red,

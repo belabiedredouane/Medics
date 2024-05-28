@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class message_all_widget extends StatelessWidget {
-  final String Maintext;
+class MessageAllWidget extends StatelessWidget {
+  final String maintext;
   final String subtext;
   final String image;
   final String time;
-  final String message_count;
+  final String messageCount;
 
-  const message_all_widget(
-      {super.key, required this.Maintext,
+  const MessageAllWidget (
+      {super.key, required this.maintext,
       required this.subtext,
       required this.image,
-      required this.message_count,
+      required this.messageCount,
       required this.time});
 
   @override
@@ -52,7 +52,7 @@ class message_all_widget extends StatelessWidget {
                     ),
                     //Main text here "lib/icons/male-doctor.png"
                     Text(
-                      Maintext,
+                      maintext,
                       style: GoogleFonts.poppins(
                         fontSize: 15,
                         color: Colors.black,
@@ -94,7 +94,7 @@ class message_all_widget extends StatelessWidget {
                       children: [
                         //Message Count Here
                         Text(
-                          message_count,
+                          messageCount,
                           style: const TextStyle(fontSize: 10, color: Colors.white),
                         )
                       ]),

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class list_doctor1 extends StatelessWidget {
+class ListDoctor1 extends StatelessWidget {
   final String image;
   final String maintext;
   final String subtext;
   final String numRating;
   final String distance;
 
-  const list_doctor1(
+  const ListDoctor1(
       {super.key, required this.distance,
       required this.image,
       required this.maintext,

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
-import 'package:medical/Screens/Widgets/doctorList.dart';
-import 'package:medical/Screens/Widgets/listicons.dart';
+import 'package:medical/Screens/Widgets/doctor_list.dart';
+import 'package:medical/Screens/Widgets/list_icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class find_doctor extends StatelessWidget {
-  const find_doctor({super.key});
+class FindDoctor extends StatelessWidget {
+  const FindDoctor({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -105,25 +105,25 @@ class find_doctor extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Row(
+          const Row(
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
-              listIcons(Icon: "lib/icons/Doctor.png", text: "General"),
-              listIcons(Icon: "lib/icons/Lungs.png", text: "Lungs Prob"),
-              listIcons(Icon: "lib/icons/Dentist.png", text: "General"),
-              listIcons(Icon: "lib/icons/psychology.png", text: "Psychiatrist")
+              ListIcons(icon: "lib/icons/Doctor.png", text: "General"),
+              ListIcons(icon: "lib/icons/Lungs.png", text: "Lungs Prob"),
+              ListIcons(icon: "lib/icons/Dentist.png", text: "General"),
+              ListIcons(icon: "lib/icons/psychology.png", text: "Psychiatrist")
             ],
           ),
-          Row(
+          const Row(
             children: [
-              const SizedBox(
+              SizedBox(
                 width: 10,
               ),
-              listIcons(Icon: "lib/icons/covid.png", text: "General"),
-              listIcons(Icon: "lib/icons/injection.png", text: "Lungs Prob"),
-              listIcons(Icon: "lib/icons/cardiologist.png", text: "General"),
+              ListIcons(icon: "lib/icons/covid.png", text: "General"),
+              ListIcons(icon: "lib/icons/injection.png", text: "Lungs Prob"),
+              ListIcons(icon: "lib/icons/cardiologist.png", text: "General"),
             ],
           ),
           const SizedBox(
@@ -156,7 +156,7 @@ class find_doctor extends StatelessWidget {
                       type: PageTransitionType.rightToLeft,
                       child: const DoctorDetails()));
             },
-            child: const doctorList(
+            child: const DoctorList(
                 distance: "800m away",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",

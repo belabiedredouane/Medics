@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class date_Select extends StatefulWidget {
+class DateSelect extends StatefulWidget {
   final String maintext;
   final String date;
 
-  const date_Select({super.key, required this.date, required this.maintext});
+  const DateSelect({super.key, required this.date, required this.maintext});
 
   @override
-  _date_SelectState createState() => _date_SelectState();
+  DateSelectState createState() => DateSelectState();
 }
 
-class _date_SelectState extends State<date_Select> {
+class DateSelectState extends State<DateSelect> {
   bool isSelected = false;
 
   void toggleSelection() {

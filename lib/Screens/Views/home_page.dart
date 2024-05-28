@@ -1,9 +1,9 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:medical/Screens/Login-Signup/Profile_screen.dart';
+import 'package:medical/Screens/Login-Signup/profiles_screen.dart';
 import 'package:medical/Screens/Login-Signup/shedule_screen.dart';
-import 'package:medical/Screens/Views/Dashboard_screen.dart';
+import 'package:medical/Screens/Views/dashboard__screen.dart';
 import 'package:medical/Screens/Widgets/TabbarPages/message_tab_all.dart';
 
 class Homepage extends StatefulWidget {
@@ -15,7 +15,7 @@ class Homepage extends StatefulWidget {
 
 class _HomepageState extends State<Homepage> {
   List<IconData> icons = [
-    FontAwesomeIcons.home,
+    FontAwesomeIcons.house,
     FontAwesomeIcons.envelope,
     FontAwesomeIcons.clipboardCheck,
     FontAwesomeIcons.user,
@@ -25,9 +25,9 @@ class _HomepageState extends State<Homepage> {
 
   List<Widget> pages = [
     const Dashboard(), // You can replace this with your actual pages
-    const message_tab_all(),
-    const shedule_screen(),
-    const Profile_screen()
+    const MessageTabAll(),
+    const SheduleScreen(),
+    const ProfileScreen()
   ];
 
   @override

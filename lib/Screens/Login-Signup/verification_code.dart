@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class verification_code extends StatelessWidget {
-  const verification_code({super.key});
+class VerificationCode extends StatelessWidget {
+  const VerificationCode({super.key});
 
   @override
   Widget build(BuildContext context) {

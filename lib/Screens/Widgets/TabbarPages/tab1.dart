@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class tab1 extends StatelessWidget {
-  const tab1({super.key});
+class Tab1 extends StatelessWidget {
+  const Tab1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +31,7 @@ class tab1 extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(
                       horizontal: 10,
                     ),
-                    child: Container(
-                      child: Image.asset("lib/icons/email.png"),
-                    ),
+                    child: Image.asset("lib/icons/email.png"),
                   ),
                   prefixIconColor: const Color.fromARGB(255, 3, 190, 150),
                   label: const Text("Enter your email"),

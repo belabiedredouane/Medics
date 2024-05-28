@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class article extends StatelessWidget {
+class Article extends StatelessWidget {
   final String mainText;
   final String dateText;
   final String duration;
   final String image;
 
-  const article({super.key, 
+  const Article({super.key, 
     required this.mainText,
     required this.dateText,
     required this.duration,

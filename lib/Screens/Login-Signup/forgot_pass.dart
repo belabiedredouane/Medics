@@ -6,14 +6,14 @@ import 'package:medical/Screens/Login-Signup/login.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class forgot_pass extends StatefulWidget {
-  const forgot_pass({super.key});
+class ForgotPass extends StatefulWidget {
+  const ForgotPass({super.key});
 
   @override
-  _TabBarExampleState createState() => _TabBarExampleState();
+  TabBarExampleState createState() => TabBarExampleState();
 }
 
-class _TabBarExampleState extends State<forgot_pass>
+class TabBarExampleState extends State<ForgotPass>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -43,7 +43,7 @@ class _TabBarExampleState extends State<forgot_pass>
             Navigator.push(
                 context,
                 PageTransition(
-                    type: PageTransitionType.topToBottom, child: const login()));
+                    type: PageTransitionType.topToBottom, child: const Login()));
           },
         ),
         backgroundColor: Colors.white,
@@ -139,7 +139,7 @@ class _TabBarExampleState extends State<forgot_pass>
                     Expanded(
                         child: TabBarView(
                             controller: tabController,
-                            children: const [tab1(), tab2()]))
+                            children: const [Tab1(), Tab2()]))
                   ],
                 ),
               ),

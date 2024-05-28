@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:medical/Screens/Login-Signup/forgot_pass.dart';
 import 'package:medical/Screens/Login-Signup/login_signup.dart';
 import 'package:medical/Screens/Login-Signup/register.dart';
-import 'package:medical/Screens/Views/Homepage.dart';
-import 'package:medical/Screens/Widgets/Auth_text_field.dart';
+import 'package:medical/Screens/Views/home_page.dart';
+import 'package:medical/Screens/Widgets/auth_text_field.dart';
 import 'package:medical/Screens/Widgets/auth_social_login.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class login extends StatelessWidget {
-  const login({super.key});
+class Login extends StatelessWidget {
+  const Login({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class login extends StatelessWidget {
                 context,
                 PageTransition(
                     type: PageTransitionType.leftToRight,
-                    child: const login_signup()));
+                    child: const LoginSignup ()));
           },
         ),
         centerTitle: true,
@@ -50,12 +50,12 @@ class login extends StatelessWidget {
             height: 40,
           ),
           //Text field Login import from Auth_text_field widget
-          const Auth_text_field(text: "Enter you email", icon: "lib/icons/email.png"),
+          const AuthTextField(text: "Enter you email", icon: "lib/icons/email.png"),
           const SizedBox(
             height: 5,
           ),
           //Text field Password
-          const Auth_text_field(
+          const AuthTextField(
               text: "Enter your password", icon: "lib/icons/lock.png"),
           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
             GestureDetector(
@@ -64,7 +64,7 @@ class login extends StatelessWidget {
                     context,
                     PageTransition(
                         type: PageTransitionType.bottomToTop,
-                        child: const forgot_pass()));
+                        child: const ForgotPass()));
               },
               child: Text(
                 "Forgot your password?",
@@ -83,7 +83,10 @@ class login extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(
               onPressed: () {
-                // Perform verification or other actions here
+                Navigator.pushReplacement(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.fade, child: const Homepage()));
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: const Color.fromARGB(255, 3, 190, 150),
@@ -128,7 +131,7 @@ class login extends StatelessWidget {
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: const register()));
+                          child: const Register()));
                 },
                 child: Text(
                   "Sign Up",
@@ -165,16 +168,16 @@ class login extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          const auth_social_logins(
+          const AuthSocialLogins(
               logo: "images/google.png", text: "Sign in with Google"),
           const SizedBox(
             height: 20,
           ),
-          const auth_social_logins(logo: "images/apple.png", text: "Sign in Apple"),
+          const AuthSocialLogins(logo: "images/apple.png", text: "Sign in Apple"),
           const SizedBox(
             height: 20,
           ),
-          const auth_social_logins(
+          const AuthSocialLogins(
               logo: "images/facebook.png", text: "Sign in facebook")
         ]),
       ),

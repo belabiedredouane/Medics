@@ -5,8 +5,8 @@ import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class appointment extends StatelessWidget {
-  const appointment({super.key});
+class Appointment extends StatelessWidget {
+  const Appointment({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class appointment extends StatelessWidget {
               const SizedBox(
                 height: 5,
               ),
-              const doctorList(
+              const DoctorList(
                 distance: "800m away",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",

@@ -4,14 +4,14 @@ import 'package:medical/Screens/Views/shedule_tab2.dart';
 import 'package:medical/Screens/Widgets/TabbarPages/message_tab_all.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class message_screen extends StatefulWidget {
-  const message_screen({super.key});
+class MessageScreen extends StatefulWidget {
+  const MessageScreen({super.key});
 
   @override
-  _TabBarExampleState createState() => _TabBarExampleState();
+  TabBarExampleState createState() => TabBarExampleState();
 }
 
-class _TabBarExampleState extends State<message_screen>
+class TabBarExampleState extends State<MessageScreen >
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -108,9 +108,9 @@ class _TabBarExampleState extends State<message_screen>
                       ),
                     ),
                     TabBarView(controller: tabController, children: const [
-                      message_tab_all(),
-                      shedule_tab2(),
-                      shedule_tab2(),
+                      MessageTabAll(),
+                      SheduleTab2(),
+                      SheduleTab2(),
                     ])
                   ],
                 ),

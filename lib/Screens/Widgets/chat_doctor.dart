@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class chat_doctor extends StatelessWidget {
-  const chat_doctor({super.key});
+class ChatDoctor extends StatelessWidget {
+  const ChatDoctor ({super.key});
 
   @override
   Widget build(BuildContext context) {

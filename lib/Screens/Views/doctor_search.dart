@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/Homepage.dart';
+import 'package:medical/Screens/Views/home_page.dart';
 import 'package:medical/Screens/Views/doctor_details_screen.dart';
 import 'package:medical/Screens/Widgets/doctorList.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class doctor_search extends StatelessWidget {
-  const doctor_search({super.key});
+class DoctorSearch extends StatelessWidget {
+  const DoctorSearch({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,32 +63,32 @@ class doctor_search extends StatelessWidget {
                       type: PageTransitionType.rightToLeft,
                       child: const DoctorDetails()));
             },
-            child: const doctorList(
+            child: const DoctorList(
                 distance: "800m Away",
                 image: "lib/icons/male-doctor.png",
                 maintext: "Dr. Marcus Horizon",
                 numRating: "4.7",
                 subtext: "Chardiologist"),
           ),
-          const doctorList(
+          const DoctorList(
               distance: "800m Away",
               image: "lib/icons/docto3.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
               subtext: "Chardiologist"),
-          const doctorList(
+          const DoctorList(
               distance: "800m Away",
               image: "lib/icons/doctor2.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
               subtext: "Chardiologist"),
-          const doctorList(
+          const DoctorList(
               distance: "800m Away",
               image: "lib/icons/black-doctor.png",
               maintext: "Dr. Marcus Horizon",
               numRating: "4.7",
               subtext: "Chardiologist"),
-          const doctorList(
+          const DoctorList(
               distance: "800m Away",
               image: "lib/icons/male-doctor.png",
               maintext: "Dr. Marcus Horizon",

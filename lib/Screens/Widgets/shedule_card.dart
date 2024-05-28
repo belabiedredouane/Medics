@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class shedule_card extends StatelessWidget {
+class SheduleCard extends StatelessWidget {
   final String mainText;
   final String subText;
   final String image;
@@ -10,7 +10,7 @@ class shedule_card extends StatelessWidget {
   final String time;
   final String confirmation;
 
-  const shedule_card(
+  const SheduleCard(
       {super.key, required this.mainText,
       required this.subText,
       required this.date,

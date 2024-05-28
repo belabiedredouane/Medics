@@ -5,8 +5,8 @@ import 'package:medical/Screens/Views/find_doctor.dart';
 import 'package:medical/Screens/Widgets/article.dart';
 import 'package:medical/Screens/Widgets/banner.dart';
 import 'package:medical/Screens/Widgets/list_doctor1.dart';
-import 'package:medical/Screens/Widgets/listicons.dart';
-import 'package:medical/Screens/Views/articlePage.dart';
+import 'package:medical/Screens/Views/article_page.dart';
+import 'package:medical/Screens/Widgets/list_icons.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
@@ -68,7 +68,7 @@ class Dashboard extends StatelessWidget {
                       context,
                       PageTransition(
                           type: PageTransitionType.rightToLeft,
-                          child: const find_doctor()));
+                          child: const FindDoctor()));
                 },
                 textAlign: TextAlign.start,/* 
                 textInputAction: TextInputAction.none, */
@@ -108,13 +108,13 @@ class Dashboard extends StatelessWidget {
             height: 20,
           ),
           //Body Start fro here
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              listIcons(Icon: "lib/icons/Doctor.png", text: "Doctor"),
-              listIcons(Icon: "lib/icons/Pharmacy.png", text: "Pharmacy"),
-              listIcons(Icon: "lib/icons/Hospital.png", text: "Hospital"),
-              listIcons(Icon: "lib/icons/Ambulance.png", text: "Ambulance"),
+              ListIcons(icon: "lib/icons/Doctor.png", text: "Doctor"),
+              ListIcons(icon: "lib/icons/Pharmacy.png", text: "Pharmacy"),
+              ListIcons(icon: "lib/icons/Hospital.png", text: "Hospital"),
+              ListIcons(icon: "lib/icons/Ambulance.png", text: "Ambulance"),
             ],
           ),
 
@@ -122,7 +122,7 @@ class Dashboard extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          const banner(),
+          const MyBanner(),
           // Banner Design
           const SizedBox(
             height: 20,
@@ -146,7 +146,7 @@ class Dashboard extends StatelessWidget {
                         context,
                         PageTransition(
                             type: PageTransitionType.rightToLeft,
-                            child: const doctor_search()));
+                            child: const DoctorSearch()));
                   },
                   child: Text(
                     "See all",
@@ -171,19 +171,19 @@ class Dashboard extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 children: const [
-                  list_doctor1(
+                  ListDoctor1(
                       distance: "130m Away",
                       image: "lib/icons/male-doctor.png",
                       maintext: "Dr. Marcus Horizon",
                       numRating: "4.7",
                       subtext: "Chardiologist"),
-                  list_doctor1(
+                  ListDoctor1(
                       distance: "130m Away",
                       image: "lib/icons/docto3.png",
                       maintext: "Dr. Maria Elena",
                       numRating: "4.6",
                       subtext: "Psychologist"),
-                  list_doctor1(
+                  ListDoctor1(
                       distance: "2km away",
                       image: "lib/icons/doctor2.png",
                       maintext: "Dr. Stevi Jessi",
@@ -215,7 +215,7 @@ class Dashboard extends StatelessWidget {
                         context,
                         PageTransition(
                             type: PageTransitionType.rightToLeft,
-                            child: const articlePage()));
+                            child: const ArticlePage()));
                   },
                   child: Text(
                     "See all",
@@ -232,7 +232,7 @@ class Dashboard extends StatelessWidget {
             height: 10,
           ),
           //Article banner here import from widget>article
-          const article(
+          const Article(
               image: "images/article1.png",
               dateText: "Jun 10, 2021 ",
               duration: "5min read",

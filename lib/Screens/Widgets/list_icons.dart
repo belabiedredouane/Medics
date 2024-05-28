@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class listIcons extends StatelessWidget {
-  final String Icon;
+class ListIcons extends StatelessWidget {
+  final String icon;
   final String text;
 
-  const listIcons({super.key, required this.Icon, required this.text});
+  const ListIcons({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class listIcons extends StatelessWidget {
                           color: Color.fromARGB(135, 238, 236, 236))
                     ],
                     image: DecorationImage(
-                      image: AssetImage(Icon),
+                      image: AssetImage(icon),
                     )),
               ),
               const SizedBox(

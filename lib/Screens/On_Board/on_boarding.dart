@@ -8,14 +8,14 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class on_boarding extends StatefulWidget {
-  const on_boarding({super.key});
+class OnBoarding extends StatefulWidget {
+  const OnBoarding({super.key});
 
   @override
-  State<on_boarding> createState() => _on_boardingState();
+  State<OnBoarding> createState() => OnBoardingState ();
 }
 
-class _on_boardingState extends State<on_boarding> {
+class OnBoardingState extends State<OnBoarding> {
   final PageController _controller = PageController();
 
   bool onLastpage = false;
@@ -33,9 +33,9 @@ class _on_boardingState extends State<on_boarding> {
               });
             },
             children: const [
-              on_board1(),
-              on_board2(),
-              on_board3(),
+              OnBoard1(),
+              OnBoard2(),
+              OnBoard3(),
             ]),
         Container(
           alignment: const Alignment(-0.6, 0.75),
@@ -69,7 +69,7 @@ class _on_boardingState extends State<on_boarding> {
                             context,
                             PageTransition(
                                 type: PageTransitionType.bottomToTop,
-                                child: const login_signup()));
+                                child: const LoginSignup ()));
                       },
                       child: Container(
                         height: MediaQuery.of(context).size.height * 0.05,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class auth_social_logins extends StatelessWidget {
+class AuthSocialLogins extends StatelessWidget {
   final String text;
   final String logo;
 
-  const auth_social_logins({super.key, required this.logo, required this.text});
+  const AuthSocialLogins({super.key, required this.logo, required this.text});
 
   @override
   Widget build(BuildContext context) {

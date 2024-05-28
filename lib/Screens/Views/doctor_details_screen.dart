@@ -11,10 +11,10 @@ class DoctorDetails extends StatefulWidget {
   const DoctorDetails({super.key});
 
   @override
-  _DoctorDetailsState createState() => _DoctorDetailsState();
+  DoctorDetailsState createState() => DoctorDetailsState();
 }
 
-class _DoctorDetailsState extends State<DoctorDetails> {
+class DoctorDetailsState extends State<DoctorDetails> {
   bool showExtendedText = false;
 
   void toggleTextVisibility() {
@@ -73,7 +73,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                 const SizedBox(
                   height: 5,
                 ),
-                const doctorList(
+                const DoctorList(
                   distance: "800m away",
                   image: "lib/icons/male-doctor.png",
                   maintext: "Dr. Marcus Horizon",
@@ -135,14 +135,14 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                       physics: const BouncingScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       children: const [
-                        date_Select(date: "21", maintext: "Mon"),
-                        date_Select(date: "22", maintext: "Tue"),
-                        date_Select(date: "23", maintext: "Wed"),
-                        date_Select(date: "24", maintext: "Thu"),
-                        date_Select(date: "25", maintext: "Fri"),
-                        date_Select(date: "26", maintext: "Sat"),
-                        date_Select(date: "27", maintext: "Sun"),
-                        date_Select(date: "28", maintext: "Mon"),
+                        DateSelect(date: "21", maintext: "Mon"),
+                        DateSelect(date: "22", maintext: "Tue"),
+                        DateSelect(date: "23", maintext: "Wed"),
+                        DateSelect(date: "24", maintext: "Thu"),
+                        DateSelect(date: "25", maintext: "Fri"),
+                        DateSelect(date: "26", maintext: "Sat"),
+                        DateSelect(date: "27", maintext: "Sun"),
+                        DateSelect(date: "28", maintext: "Mon"),
                       ],
                     ),
                   ),
@@ -174,10 +174,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         child: const Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              time_select(mainText: "09:00 AM"),
-                              time_select(mainText: "01:00 AM"),
-                              time_select(mainText: "04:00 AM"),
-                              time_select(mainText: "07:00 AM"),
+                              TimeSelect(mainText: "09:00 AM"),
+                              TimeSelect(mainText: "01:00 AM"),
+                              TimeSelect(mainText: "04:00 AM"),
+                              TimeSelect(mainText: "07:00 AM"),
                             ]),
                       ),
                       const SizedBox(
@@ -189,10 +189,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         child: const Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              time_select(mainText: "10:00 PM"),
-                              time_select(mainText: "02:00 PM"),
-                              time_select(mainText: "07:00 PM"),
-                              time_select(mainText: "09:00 PM"),
+                              TimeSelect(mainText: "09:00 AM"),
+                              TimeSelect(mainText: "01:00 AM"),
+                              TimeSelect(mainText: "04:00 AM"),
+                              TimeSelect(mainText: "07:00 AM"),
                             ]),
                       ),
                       const SizedBox(
@@ -204,10 +204,10 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                         child: const Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              time_select(mainText: "11:00 AM"),
-                              time_select(mainText: "03:00 PM"),
-                              time_select(mainText: "08:00 PM"),
-                              time_select(mainText: "10:00 AM"),
+                              TimeSelect(mainText: "09:00 AM"),
+                              TimeSelect(mainText: "01:00 AM"),
+                              TimeSelect(mainText: "04:00 AM"),
+                              TimeSelect(mainText: "07:00 AM"),
                             ]),
                       ),
                     ],
@@ -256,7 +256,7 @@ class _DoctorDetailsState extends State<DoctorDetails> {
                               context,
                               PageTransition(
                                   type: PageTransitionType.rightToLeft,
-                                  child: const appointment()));
+                                  child: const Appointment()));
                         },
                         child: Container(
                           height: MediaQuery.of(context).size.height * 0.06,

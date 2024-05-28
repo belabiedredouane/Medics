@@ -4,14 +4,14 @@ import 'package:medical/Screens/Views/shedule_tab1.dart';
 import 'package:medical/Screens/Views/shedule_tab2.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class shedule_screen extends StatefulWidget {
-  const shedule_screen({super.key});
+class SheduleScreen extends StatefulWidget {
+  const SheduleScreen ({super.key});
 
   @override
-  _TabBarExampleState createState() => _TabBarExampleState();
+  TabBarExampleState createState() => TabBarExampleState();
 }
 
-class _TabBarExampleState extends State<shedule_screen>
+class TabBarExampleState extends State<SheduleScreen >
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -111,9 +111,9 @@ class _TabBarExampleState extends State<shedule_screen>
                         child: TabBarView(
                             controller: tabController,
                             children: const [
-                          shedule_tab1(),
-                          shedule_tab2(),
-                          shedule_tab2(),
+                          SheduleTab1(),
+                          SheduleTab2(),
+                          SheduleTab2(),
                         ]))
                   ],
                 ),

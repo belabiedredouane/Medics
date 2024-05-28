@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:medical/Screens/Views/Homepage.dart';
+import 'package:medical/Screens/Views/home_page.dart';
 import 'package:medical/Screens/Widgets/article.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class articlePage extends StatelessWidget {
-  const articlePage({super.key});
+class ArticlePage extends StatelessWidget {
+  const ArticlePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -547,7 +547,7 @@ class articlePage extends StatelessWidget {
             height: 20,
           ),
           //Import this from widget
-          const article(
+          const Article(
               image: "images/article1.png",
               dateText: "2 min Read",
               duration: "2 min read",
